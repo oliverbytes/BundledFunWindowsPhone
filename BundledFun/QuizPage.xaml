@@ -1,0 +1,120 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="BundledFun.PivotPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d" FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="True" d:DesignHeight="768" d:DesignWidth="480">
+    
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" >
+        <Rectangle 
+        VerticalAlignment="Top" HorizontalAlignment="Stretch" 
+        Height="200" Fill="#FF3182C1" />
+        <!--Pivot Control-->
+        <controls:Pivot Name="pivot" Title="BUNDLEDFUN" SelectionChanged="pivot_SelectionChanged" Foreground="White" Background="Transparent">
+            <controls:PivotItem Header="Images" >
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                     
+                    <!--TitlePanel contains the name of the application and page title-->
+                    <StackPanel x:Name="TitlePanelImages" Margin="0,-18,0,20" Orientation="Horizontal">
+                        <TextBlock Height="34" HorizontalAlignment="Left" Name="txtCorrectImages" Text="Correct: " VerticalAlignment="Top" Width="200" TextAlignment="Center" FontSize="20" TextWrapping="Wrap" Foreground="White" />
+                        <TextBlock Height="34" Name="txtTimerImages" Text="Time Left:" Width="200" TextAlignment="Center" FontSize="20" TextWrapping="Wrap" Foreground="White" />
+                    </StackPanel>
+
+                    <!--ContentPanel - place additional content here-->
+                    <Grid x:Name="ContentPanelImages" Margin="-17,20,-24,9" Grid.RowSpan="2" Background="White" Height="578" Width="497">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="212*" />
+                            <ColumnDefinition Width="270" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Height="171" HorizontalAlignment="Left" Margin="27,18,0,0" Name="txtQuestionImages" Text="Testing Testing Testing Testing Testing Testing Testing Testing Testing Testing Testing Testing Testing Testing Testing Testing Testing Testing Testing Testing Testing Testing Testing Testing " VerticalAlignment="Top" Width="442" TextAlignment="Center" FontSize="20" TextWrapping="Wrap" Grid.ColumnSpan="2" Foreground="#FF6F6F6F" />
+                        <Button Content="A" HorizontalAlignment="Left" Margin="10,400,0,116" Name="btnAImages" Width="468" Click="btnAImages_Click" Grid.ColumnSpan="2" Foreground="White" Background="#FF3182C1" BorderBrush="White" BorderThickness="0" Height="72" />
+                        <Button Content="B" Height="72" HorizontalAlignment="Left" Margin="10,454,0,0" Name="btnBImages" VerticalAlignment="Top" Width="468" Click="btnBImages_Click" Grid.ColumnSpan="2" Foreground="White" Background="#FF3182C1" BorderThickness="0" />
+                        <Button Content="C" Height="72" HorizontalAlignment="Left" Margin="10,508,0,0" Name="btnCImages" VerticalAlignment="Top" Width="468" Click="btnCImages_Click" Grid.ColumnSpan="2" Foreground="White" Background="#FF3182C1" BorderBrush="White" BorderThickness="0" />
+                        <Image Height="210" HorizontalAlignment="Left" Margin="46,194,0,0" Name="Images" Stretch="Uniform" VerticalAlignment="Top" Width="393" Grid.ColumnSpan="2" />
+                    </Grid>
+                </Grid>
+            </controls:PivotItem>
+
+            <controls:PivotItem Header="Trailers">
+                <Grid >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <!--TitlePanel contains the name of the application and page title-->
+                    <StackPanel x:Name="TitlePanelTrailers" Grid.Row="0" Margin="0,-18,0,20" Orientation="Horizontal">
+                        <TextBlock Height="34" HorizontalAlignment="Left" Name="txtCorrectTrailers" Text="Correct: " VerticalAlignment="Top" Width="200" TextAlignment="Center" FontSize="20" TextWrapping="Wrap" />
+                        <TextBlock Height="34" Name="txtTimerTrailers" Text="Time Left:" Width="200" TextAlignment="Center" FontSize="20" TextWrapping="Wrap" />
+                    </StackPanel>
+
+                    <!--ContentPanel - place additional content here-->
+                    <Grid x:Name="ContentPanel2" Margin="-17,20,-24,9" Grid.RowSpan="2" Background="White" Height="578" Width="497">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="116*" />
+                            <ColumnDefinition Width="340" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Height="130" HorizontalAlignment="Left" Margin="20,12,0,0" Name="txtQuestionTrailers" Text="This is a sample question for my 1st application for windows phone 7 development." VerticalAlignment="Top" Width="459" TextAlignment="Center" FontSize="20" TextWrapping="Wrap" Grid.ColumnSpan="2" Foreground="#FF6F6F6F" />
+                        <Button Content="A" HorizontalAlignment="Left" Margin="10,386,0,120" Name="btnATrailers" Width="468" Click="btnATrailers_Click" Grid.ColumnSpan="2" Height="72" Foreground="White" Background="#FF3182C1" />
+                        <Button Content="B" Height="72" HorizontalAlignment="Left" Margin="10,440,0,0" Name="btnBTrailers" VerticalAlignment="Top" Width="468" Click="btnBTrailers_Click" Grid.ColumnSpan="2" Foreground="White" Background="#FF3182C1"/>
+                        <Button Content="C" Height="72" HorizontalAlignment="Left" Margin="10,494,0,0" Name="btnCTrailers" VerticalAlignment="Top" Width="468" Click="btnCTrailers_Click" Grid.ColumnSpan="2" Foreground="White" Background="#FF3182C1"/>
+                        <MediaElement Height="224" HorizontalAlignment="Left" Margin="23,148,0,0" Name="media" VerticalAlignment="Top" Width="444" Grid.ColumnSpan="2" Stretch="UniformToFill" MediaEnded="media_MediaEnded" />
+                    </Grid>
+                </Grid>
+            </controls:PivotItem>
+
+            <controls:PivotItem Header="Songs">
+                <Grid >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <!--TitlePanel contains the name of the application and page title-->
+                    <StackPanel x:Name="TitlePanelSongs" Grid.Row="0" Margin="0,-18,0,20" Orientation="Horizontal">
+                        <TextBlock Height="34" HorizontalAlignment="Left" Name="txtCorrectSongs" Text="Correct: " VerticalAlignment="Top" Width="200" TextAlignment="Center" FontSize="20" TextWrapping="Wrap" />
+                        <TextBlock Height="34" Name="txtTimerSongs" Text="Time Left:" Width="200" TextAlignment="Center" FontSize="20" TextWrapping="Wrap" />
+                    </StackPanel>
+
+                    <!--ContentPanel - place additional content here-->
+                    <Grid x:Name="ContentPanel3" Margin="-17,20,-24,9" Grid.RowSpan="2" Background="White" Height="578" Width="497">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="116*" />
+                            <ColumnDefinition Width="340" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Height="268" HorizontalAlignment="Left" Margin="50,64,0,0" Name="txtQuestionSongs" Text="This is a sample question for my 1st application for windows phone 7 development.This is a sample question for my 1st application for windows phone 7 development." VerticalAlignment="Top" Width="392" TextAlignment="Center" FontSize="25" TextWrapping="Wrap" Grid.ColumnSpan="2" Foreground="#FF6F6F6F" Padding="0" />
+                        <Button Content="A" HorizontalAlignment="Left" Margin="10,360,0,117" Name="btnASongs" Width="468" Click="btnASongs_Click" Grid.ColumnSpan="2"  Foreground="White" Background="#FF3182C1" Height="72" />
+                        <Button Content="B" Height="72" HorizontalAlignment="Left" Margin="10,428,0,0" Name="btnBSongs" VerticalAlignment="Top" Width="468" Click="btnBSongs_Click" Grid.ColumnSpan="2" Foreground="White" Background="#FF3182C1" />
+                        <Button Content="C" Height="72" HorizontalAlignment="Left" Margin="10,482,0,0" Name="btnCSongs" VerticalAlignment="Top" Width="468" Click="btnCSongs_Click" Grid.ColumnSpan="2" Foreground="White" Background="#FF3182C1" />
+                    </Grid>
+                </Grid>
+            </controls:PivotItem>
+        </controls:Pivot>
+        <Button Content="Restart" Height="62" HorizontalAlignment="Left" Margin="354,-12,0,0" Name="btnRestart" VerticalAlignment="Top" Width="132" FontSize="20" Click="btnRestart_Click" Foreground="White" BorderBrush="#6DFFFFFF" />
+    </Grid>
+
+    <!--Sample code showing usage of ApplicationBar-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton x:Name="appbar_button1" IconUri="/Imagess/appbar_button1.png" Text="Button 1"/>
+            <shell:ApplicationBarIconButton x:Name="appbar_button2" IconUri="/Imagess/appbar_button2.png" Text="Button 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem x:Name="mnuRetry" Text="Restart"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+    
+</phone:PhoneApplicationPage>

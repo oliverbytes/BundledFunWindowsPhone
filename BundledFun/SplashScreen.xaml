@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="BundledFun.SplashScreen"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    d:DesignHeight="805" d:DesignWidth="480">
+
+    <Grid x:Name="LayoutRoot" Background="White" Width="480" Height="800">
+        <ProgressBar HorizontalAlignment="Left" Margin="47,692,0,89" Name="progressBar1" Width="383" Foreground="#FF0062FF" Background="White" />
+        <Image HorizontalAlignment="Left" Margin="0,-74,0,-78" Name="image1" Stretch="Uniform" Width="480" Source="SplashScreenImage.jpg" />
+        <TextBlock HorizontalAlignment="Left" Margin="185,656,0,114" Name="textBlock1" Text="Please Wait..." Width="111" Foreground="White" FontSize="22" />
+    </Grid>
+</UserControl>
